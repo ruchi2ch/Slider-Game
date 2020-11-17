@@ -1,0 +1,81 @@
+:root{
+    --width: 400px;
+    --boardWidth: 500px;
+}
+*{
+    padding: 0;
+    margin: 0;
+    outline: none;
+    overflow-x: hidden;
+}
+.title{
+    text-align: center;
+    background-color: chartreuse;
+
+}
+#counter{
+    color:rgb(112, 65, 10);
+    font-size:25px;
+    margin:20px auto;
+    padding:15px 20px;
+    border: 2px solid black;
+    background-color:rgb(82, 165, 165);
+    text-align: center;
+    position:relative;
+}
+.game{
+    width: var(--boardWidth);
+    height: 500px;
+    margin:auto;
+    border: 1px solid black;
+}
+
+.slider{
+    visibility: hidden;
+    height: 20px;
+    width: 100px;
+    background-color: grey;
+    position: relative;
+}
+#slider1{
+    visibility: visible;
+}
+.animate{
+    animation: side 4s infinite linear;
+}
+@keyframes side{
+    0%{left:0px}
+    50%{left:var(--width)}
+    100%{left:0px}
+}
+
+
+#btn{
+    background-color: pink;
+    font-size: 2rem;
+    padding: 0.5rem 2rem;
+    border: 3px solid black;
+    border-radius: 0.3rem;
+    margin: 1rem auto;
+    display: block;
+}
+#btn:hover, #restart:hover{
+    background-color: yellow; 
+}
+#btn:active, #restart:active{
+    background-color: red;
+}
+#restart{
+    background-color: orange;
+    display: none;
+}
+@media only screen and (max-width: 600px){
+    .game{
+        margin-bottom: 10rem;
+    }
+    #btn{
+        position: fixed;
+        left: 25%;
+        bottom: 10px;
+    }
+}
