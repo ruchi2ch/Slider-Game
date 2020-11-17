@@ -1,2 +1,2 @@
 # Slider-Game
-It is a game made by using html,css,javascript.:metal:
+It is a game made by using html,css,javascript.
